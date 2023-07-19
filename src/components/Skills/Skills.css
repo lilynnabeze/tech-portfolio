@@ -1,0 +1,74 @@
+.skills-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  height: 80vh;
+  font-family: "Josefin Sans", sans-serif;
+  background: url(https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGUlMjBsYXB0b3B8ZW58MHx8MHx8fDA%3D&w=1000&q=80);
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9); /* Background color with reduced opacity */
+}
+
+.skills-section_logo-container {
+ 
+  margin-top: 250px;
+}
+
+.skills-section_logo {
+  width: 100px; /* Set a fixed width */
+  height: 100px; /* Set a fixed height */
+  object-fit: contain;
+  margin-right: 50px;
+  transition: filter 0.3s; /* Add transition effect for hover */
+  filter: grayscale(100%); /* Convert logos to grayscale */
+}
+
+.skills-section_logo:hover {
+  filter: grayscale(0%); /* Restore original color on hover */
+}
+
+.skillspage-header {
+  margin-top: 40px;
+  margin-bottom: 45px;
+}
+
+.skillspage-title {
+  font-size: 35px;
+  color: rgb(245, 236, 236);
+  position: absolute;
+  right: 42%;
+  z-index: 2;
+}
+
+.skillspage-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: rgb(252, 148, 12);
+  margin: 6px auto 0;
+}
+
+.skillspage-title-background {
+  font-size: 100px;
+  letter-spacing: 6px;
+  color: rgba(80, 65, 76, 0.2);
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 30px;
+}

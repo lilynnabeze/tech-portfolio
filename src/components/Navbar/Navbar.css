@@ -1,0 +1,173 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(7, 4, 8, 0.7);
+  padding-left: 60px;
+  color: white;
+  box-shadow: 0 2px 4px rgba(158, 40, 119, 0.2);
+  position: fixed;
+  top: -100px; /* Position the Navbar slightly higher than the top of the viewport */
+  left: 0;
+  width: 100%;
+  transform: translateY(0%); /* Move the Navbar off the viewport initially */
+  transition: transform 0.3s ease;
+  z-index: 999; /* Ensure the Navbar appears above other elements */
+}
+
+.navbar.visible {
+  top: 0; /* Move the Navbar to the top of the viewport when visible */
+ 
+}
+
+
+.logo {
+  position: relative;
+}
+
+.logo-name {
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  z-index: -1;
+}
+
+.logo .letter {
+  font-size: 80px; 
+  font-family: "Times New Roman", Times, serif;
+  background-image: linear-gradient(
+    135deg,
+    purple,
+    orange
+  ); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); 
+  z-index: -1;
+  animation: rotateLetter 10s linear infinite; 
+}
+
+@keyframes rotateLetter {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  10% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  20% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.navbar-links {
+  display: flex;
+  letter-spacing: 3px;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.contact-link,
+.skills-link,
+.projects-link,
+.about-link,
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 100px;
+  padding: 5px;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  transform: translateZ(0);
+}
+
+.contact-link:hover,
+.skills-link:hover,
+.projects-link:hover,
+.about-link:hover,
+.home-link:hover {
+  width: 300px;
+  
+}
+
+.contact-link::before,
+.skills-link::before,
+.projects-link::before,
+.about-link::before,
+.home-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Adjust the opacity by changing the last value (0.5) */
+  transition: opacity 0.3s ease;
+}
+
+.home-link {
+  background: url(https://cdn.pixabay.com/photo/2018/02/02/17/29/nature-3125912_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about-link {
+  background: url(https://w0.peakpx.com/wallpaper/50/411/HD-wallpaper-aesthetic-advance-creative-girl-nature-royal-unique.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.projects-link {
+  background: url(https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3NwYWNlfGVufDB8fDB8fHww&w=1000&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.skills-link {
+  background: url(https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?cs=srgb&dl=pexels-ovan-57690.jpg&fm=jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-link {
+  background: url(https://wallpapers.com/images/hd/workspace-and-a-man-tumblr-desktop-yo9l7s4h35tgmvsh.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navbar-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  color: white;
+  position: relative;
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.text {
+  color: white;
+  position: absolute;
+  z-index: 1;
+}
+

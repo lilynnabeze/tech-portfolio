@@ -1,0 +1,237 @@
+.homepage_container {
+  display: flex;
+  background: url(https://media2.giphy.com/media/UYBDCJjwOd9Re/giphy.gif?cid=ecf05e47y2n0lg04kmdd7saqxt4m33pjg5ye406inokc6g6m&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  overflow-x: hidden; 
+  box-shadow: 0 2px 50px rgba(100, 5, 6, 0.2);
+  max-height: 100vh;
+}
+
+.sidebar {
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dynamic-word {
+  font-weight: bold;
+  font-size: 65px;
+  font-family:'Josefin Sans', sans-serif;
+  text-align: center;
+  background-image: linear-gradient(
+      135deg,
+      purple,
+      orange
+    ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-left: 40px;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.homepage-logo_container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px 60px;
+  display: flex;
+  align-items: flex-start;
+
+}
+  
+  .homepage-logo_name {
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: 100;
+  font-family: "Times New Roman", Times, serif;
+  position: relative;
+  z-index: 1;
+  margin-top: 10px; 
+  color: white;
+  }
+  
+  .homepage-logo_container .homepage-logo_letter {
+    font-size: 80px; 
+    font-family: "Times New Roman", Times, serif;
+    background-image: linear-gradient(
+      135deg,
+      purple,
+      orange
+    ); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); 
+    z-index: 1;
+    animation: rotateLetter 10s linear infinite; 
+  }
+  
+  @keyframes rotateLetter {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    10% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    20% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+  
+
+.homepage-icons {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  color: white;
+  position: absolute; /* Changed to absolute */
+  top: 20px; /* Added to position at the top */
+  left: 50%; /* Added to center horizontally */
+  transform: translateX(-50%); /* Added to center horizontally */
+  z-index: 1;
+  opacity: 0.7;
+  }
+
+  .home-text, .about-text, .projects-text, .skills-text, .contact-text {
+    position: absolute; /* Added to position absolutely */
+    bottom: 90px; /* Added to position at the bottom */
+    left: 50%; /* Added to center horizontally */
+    transform: translate(-50%, -50%) rotate(-90deg);
+    font-size: 35px; /* Added to center horizontally */
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;;
+  }
+
+  .projects-text,
+  .contact-text {
+    bottom: 120px; 
+  }
+
+  
+
+  .homepage-link:hover .home-text,
+  .homepage-link:hover .about-text,
+  .homepage-link:hover .projects-text,
+  .homepage-link:hover .skills-text,
+  .homepage-link:hover .contact-text {
+    transform: translate(-50%, -0.8%) rotate(0deg);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    color: orange;
+    text-shadow: -5px 5px 5px black;
+  }
+
+.Homepage-links_container {
+    display: flex;
+    flex-direction: row; /* Updated to row */
+    align-items: flex-end;
+    justify-content: flex-end;
+    letter-spacing: 3px;
+    opacity: 0;
+    transform: translateY(-100%);
+  animation: slideIn 0.5s ease 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+  
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.homepage-link {
+  width: 120px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  transform: translateZ(0);
+  
+}
+
+.homepage-link:hover {
+    width: 300px;
+
+  }
+
+.homepage-homelink {
+  background: url(https://cdn.pixabay.com/photo/2018/02/02/17/29/nature-3125912_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.homepage-aboutlink {
+    background: url( https://w0.peakpx.com/wallpaper/50/411/HD-wallpaper-aesthetic-advance-creative-girl-nature-royal-unique.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+ 
+  .homepage-projectslink {
+    background: url(https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8d29ya3NwYWNlfGVufDB8fDB8fHww&w=1000&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .homepage-skillslink {
+    background: url(https://images.pexels.com/photos/57690/pexels-photo-57690.jpeg?cs=srgb&dl=pexels-ovan-57690.jpg&fm=jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  .homepage-contactlink {
+    background: url(https://wallpapers.com/images/hd/workspace-and-a-man-tumblr-desktop-yo9l7s4h35tgmvsh.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+.homepage-homelink::before,
+.homepage-aboutlink::before,
+.homepage-projectslink::before,
+.homepage-skillslink::before,
+.homepage-contactlink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: -1;
+}
