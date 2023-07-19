@@ -1,4 +1,4 @@
-import "../Skills/skills.css";
+import "../Skills/Skills.css";
 
 export default function Skills() {
   const logos = [
