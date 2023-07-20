@@ -22,10 +22,24 @@ export default function Skills() {
       src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
       alt: "Logo 4",
     },
+
     {
       id: 5,
-      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png",
+      src: "https://cdn-icons-png.flaticon.com/512/4494/4494748.png",
       alt: "Logo 5",
+    },
+
+    {
+      id: 6,
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1039px-Vitejs-logo.svg.png",
+      alt: "Logo 5",
+    },
+
+    
+    {
+      id: 7,
+      src: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/1667px-Figma-logo.svg.png",
+      alt: "Logo 6",
     },
   ];
 
