@@ -2,12 +2,15 @@ import { useState } from "react";
 import "../Contact/Contact.css";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: "",
     email: "",
     phone: "",
     message: "",
-  });
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   function encode(data) {
     return Object.keys(data)
@@ -30,10 +33,16 @@ export default function Contact() {
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", formData }),
+      body: encode({ "form-name": "contact", ...formData }),
     })
-      .then(() => alert("Message sent!"))
-      .catch((error) => alert(error));
+      .then(() => {
+        setSubmissionStatus("success");
+        setFormData(initialFormData); // Reset form fields to initial state
+      })
+      .catch((error) => {
+        setSubmissionStatus("error");
+        console.error(error);
+      });
   }
 
   return (
@@ -46,7 +55,14 @@ export default function Contact() {
         <div className="animated-text">Let&apos;s Connect!</div>
       </div>
       <div className="form-container">
-        <form name="contact" onSubmit={handleSubmit} method="post" data-netlify="true">
+        {submissionStatus === "success" && <p>Message sent!</p>}
+        {submissionStatus === "error" && <p>Error submitting the form.</p>}
+        <form
+          name="contact"
+          onSubmit={handleSubmit}
+          method="post"
+          data-netlify="true"
+        >
           <div className="form-input form-namefield">
             <label htmlFor="name"></label>
             <input
