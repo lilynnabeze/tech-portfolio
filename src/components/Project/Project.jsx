@@ -4,7 +4,7 @@ import { useSpring, animated } from "@react-spring/web";
 import "../Project/Project.css";
 import image from "../Project/assets/Cash2go-LoginPage.png";
 import starwars from "../Project/assets/Starwars-Image.png";
-import contactForm from "../Project/assets/contactForm-Image.png";
+import contactForm from "../Project/assets/ContactForm-Image.png";
 import profileSearch from "../Project/assets/ProfileSearch-Image.png";
 import googleHomePage from "../Project/assets/GoogleClone-Image.png";
 import todoList from "../Project/assets/Todo-List-Image.png";
@@ -35,7 +35,8 @@ export default function Project() {
     {
       title: "GOOGLE HOMEPAGE",
       image: googleHomePage,
-      description: "A Clone of Google Homepage (Minimal search functionality included) -ReactJs",
+      description:
+        "A Clone of Google Homepage (Minimal search functionality included) -ReactJs",
       deployedLink: "https://googlereactclone.netlify.app/",
     },
 
@@ -60,7 +61,8 @@ export default function Project() {
 
   const handleSlideChange = (index) => {
     setActiveSlide(index);
-    scrollContainerRef.current.scrollLeft = index * (window.innerWidth / projectsPerPage);
+    scrollContainerRef.current.scrollLeft =
+      index * (window.innerWidth / projectsPerPage);
   };
 
   const slideAnimation = useSpring({
@@ -74,10 +76,13 @@ export default function Project() {
     <div className="project-section_wrapper" id="projects">
       <div className="projectsection-header">
         <h1 className="projectsection-title">What I&apos;ve Worked On?</h1>
-        <span className= "projectsection-title-background">PROJECTS</span>
+        <span className="projectsection-title-background">PROJECTS</span>
       </div>
-      <div className="projects-slider" ref ={scrollContainerRef}>
-        <animated.div className="slide-container" style={{ width: `${numSlides * 100}%`, ...slideAnimation }}>
+      <div className="projects-slider" ref={scrollContainerRef}>
+        <animated.div
+          className="slide-container"
+          style={{ width: `${numSlides * 100}%`, ...slideAnimation }}
+        >
           {projects.map((project, index) => (
             <div key={index} className="project-container">
               <a
@@ -101,7 +106,7 @@ export default function Project() {
         </animated.div>
       </div>
       <div className="scroll-indicators">
-      {Array.from({ length: numSlides }).map((_, index) => (
+        {Array.from({ length: numSlides }).map((_, index) => (
           <div
             key={index}
             className={`scroll-indicator ${
