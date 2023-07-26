@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 import HomeIcon from "../Home/icons/HomeIcon";
 import AboutIcon from "../Home/icons/AboutIcon";
 import ProjectsIcon from "../Home/icons/ProjectsIcon";
 import SkillsIcon from "../Home/icons/SkillsIcon";
 import ContactIcon from "../Home/icons/ContactIcon";
+
 import "../Home/Home.css";
+
 
 export default function Home() {
   const [changingWord, setChangingWord] = useState("MODERN");
@@ -26,7 +29,7 @@ export default function Home() {
 
   
   return (
-    <div className="homepage_container" id="homepage">
+    <div className="homepage_container" id="home">
       <div className="sidebar">
         <div className="dynamic-word">{changingWord}</div>
       </div>
@@ -35,30 +38,55 @@ export default function Home() {
         <h1 className="homepage-logo_name">ASONWA</h1>
       </div>
       <div className="content">
-        <div className="Homepage-links_container">
-          <a className="homepage-link homepage-homelink" href="#">
-            <HomeIcon />
-            <span className="home-text">HOME</span>
-          </a>
-          <a className="homepage-link homepage-aboutlink" href="#">
-            <AboutIcon />
-            <span className="about-text">ABOUT</span>
-          </a>
-          <a className="homepage-link homepage-skillslink" href="#">
-            <SkillsIcon />
-            <span className="skills-text">SKILLS</span>
-          </a>
-          <a className="homepage-link homepage-projectslink" href="#">
-            <ProjectsIcon />
-            <span className="projects-text">PROJECTS</span>
-          </a>
+      <div className="Homepage-links_container">
+        <Link
+          className="homepage-link homepage-homelink"
+          to="home"
+          smooth={true}
+          duration={500}
+        >
+          <HomeIcon />
+          <span className="home-text">HOME</span>
+        </Link>
+        <Link
+          className="homepage-link homepage-aboutlink"
+          to="about"
+          smooth={true}
+          duration={500}
+        >
+          <AboutIcon />
+          <span className="about-text">ABOUT</span>
+        </Link>
+        <Link
+          className="homepage-link homepage-skillslink"
+          to="skills"
+          smooth={true}
+          duration={500}
+        >
+          <SkillsIcon />
+          <span className="skills-text">SKILLS</span>
+        </Link>
+        <Link
+          className="homepage-link homepage-projectslink"
+          to="projects"
+          smooth={true}
+          duration={500}
+        >
+          <ProjectsIcon />
+          <span className="projects-text">PROJECTS</span>
+        </Link>
 
-          <a className="homepage-link homepage-contactlink" href="#">
-            <ContactIcon />
-            <span className="contact-text">CONTACT</span>
-          </a>
-        </div>
+        <Link
+          className="homepage-link homepage-contactlink"
+          to="contact"
+          smooth={true}
+          duration={500}
+        >
+          <ContactIcon />
+          <span className="contact-text">CONTACT</span>
+        </Link>
       </div>
+    </div>
     </div>
   );
 }

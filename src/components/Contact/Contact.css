@@ -1,0 +1,176 @@
+.contact-section {
+  display: flex;
+  align-items: center;
+  height: 135vh;
+  justify-content: space-between;
+  position: relative;
+  padding: 50px;
+  background: url("https://www.ntro.org.au/hs-fs/hubfs/NTRA%20Gala%20Theme%20No%20Title.jpg?width=2000&name=NTRA%20Gala%20Theme%20No%20Title.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contactsection-header {
+  margin-bottom: 820px;
+}
+
+.contactsection-title {
+  font-size: 35px;
+  color: rgb(245, 236, 236);
+  position: absolute;
+  right: 36%;
+  z-index: 2;
+  margin-top: 60px;
+}
+
+.contactsection-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: rgb(252, 148, 12);
+  margin: 6px auto 0;
+}
+
+.contactsection-title-background {
+  font-size: 100px;
+
+  color: rgba(80, 65, 76, 0.2);
+  font-weight: 900;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  margin-top: 90px;
+}
+
+.gif-container {
+  flex: 1;
+  max-width: 40%;
+  position: relative;
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+    color: white;
+  }
+  50% {
+    opacity: 1;
+    color: rgb(9, 234, 250);
+  }
+  75% {
+    color: purple;
+  }
+}
+
+.animated-text {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  font-family: "Zeyada", cursive;
+  text-align: center;
+  animation: fadeInOut 3s ease-in-out infinite;
+  /* Additional styles to position the text in the middle */
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.form-container {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 90px;
+  margin-top: 200px;
+}
+
+.form-container .form-inputtitle {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.form-emailfield {
+  margin-bottom: 20px;
+}
+
+::placeholder {
+  text-align: center;
+  font-size: 14px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  background-color: #3b0c28;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  border-top: none;
+  caret-color: orange;
+  text-align: center;
+  color: white;
+}
+
+input {
+  height: 45px;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #3b0c28 inset; /* Set the desired background color */
+  -webkit-text-fill-color: white; /* Set the desired text color */
+}
+
+.form-submitbutton {
+  display: flex;
+  justify-content: center;
+  margin-top: -2px;
+}
+
+button {
+  font-size: 14px;
+  animation: buttonshake 6s infinite;
+  letter-spacing: 2px;
+  background: transparent;
+  border: 1px solid rgb(250, 226, 182);
+  color: rgb(250, 226, 182);
+  padding: 15px 40px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(221, 124, 14);
+  border: 1px solid rgb(221, 124, 14);
+  color: white;
+}
+
+@keyframes buttonshake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-5px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(5px);
+  }
+}

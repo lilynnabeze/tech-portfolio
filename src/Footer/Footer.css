@@ -1,0 +1,41 @@
+/* Footer.css */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f040c;
+  padding: 20px;
+}
+
+.footer-left {
+  margin-left: 60px;
+}
+
+.footer-right {
+  display: flex;
+  gap: 12px;
+  margin-right: 95px;
+}
+
+.social-icon {
+  width: 35px;
+  height: 35px;
+  transition: filter 0.3s; /* Add transition effect for hover */
+  filter: grayscale(50%); /* Convert logos to grayscale */
+}
+
+.social-icon:hover {
+  filter: grayscale(0%); /* Restore original color on hover */
+  transform: scale(1.2); /* Slightly scale up the logo on hover */
+}
+
+
+
+/* Style the copyright text */
+/* You can further adjust this to fit your design */
+.footer-left p {
+  margin: 0;
+  font-size: 14px;
+  color: #777;
+  font-weight: 600;
+}

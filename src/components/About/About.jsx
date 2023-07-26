@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       {/* <Navbar /> */}
-      <div className="aboutpage-container" id="aboutpage">
+      <div className="aboutpage-container" id="about">
         <div className="aboutpage-header">
           <h1 className="aboutpage-title">Get to Know Me</h1>
           <span className="aboutpage-title-background">ABOUT ME</span>
@@ -19,26 +19,39 @@ export default function About() {
               Brands with Cutting-Edge Web Designs
             </h2>
             <div className="aboutpage-text-description">
-              <p className="">
-                Driven by a love for clean and elegant Web Development and with
-                4+ years of user-centered design background, I am dedicated to
-                chanelling that design background into the technical space by
-                creating captivating digital experiences.{" "}
+              <p className="first-paragraph">
+                Driven by a love for clean and elegant Web Development with a
+                strong background in design and a deep understanding of user
+                experience principles,{" "}
               </p>
-              <p>
-                With a strong eye for detail and a passion for crafting
-                delightful user experiences, I specialize in transforming ideas
+              <p className="second-paragraph">
+                I specialize in transforming ideas
                 into pixel-perfect websites that seamlessly blend form and
                 function and I am committed to creating impactful online
                 experiences.
               </p>{" "}
-              <p>
+              <p className="third-paragraph">
                 Let&apos;s collaborate to transform your ideas into visually
                 stunning and user-friendly digital realities.
               </p>
             </div>
           </div>
-          <img className="aboutpage-image-duplicate" src={image} alt="Profile Duplicate" />
+          <img
+            className="aboutpage-image-duplicate"
+            src={image}
+            alt="Profile Duplicate"
+          />
+          
+        </div>
+        <div className="whatsapp-button-container">
+          <a
+            href="https://wa.me/+2348161191127" // Replace with the URL of your resume file or resume page
+            className="whatsapp-button" // Add CSS class for styling the button
+            target="_blank" // Open the resume in a new tab/window
+            rel="noopener noreferrer" // Recommended for security reasons when using target="_blank"
+          >
+            Say Hello
+          </a>
         </div>
       </div>
     </>
