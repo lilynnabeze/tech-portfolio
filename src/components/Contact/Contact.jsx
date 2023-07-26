@@ -10,7 +10,6 @@ export default function Contact() {
   };
 
   const [formData, setFormData] = useState(initialFormData);
-  const [submissionStatus, setSubmissionStatus] = useState(null);
 
   function encode(data) {
     return Object.keys(data)
@@ -36,12 +35,12 @@ export default function Contact() {
       body: encode({ "form-name": "contact", ...formData }),
     })
       .then(() => {
-        setSubmissionStatus("success");
+        alert("Message sent!");
         setFormData(initialFormData); // Reset form fields to initial state
       })
       .catch((error) => {
-        setSubmissionStatus("error");
         console.error(error);
+        alert("Error submitting the form.");
       });
   }
 
@@ -55,8 +54,6 @@ export default function Contact() {
         <div className="animated-text">Let&apos;s Connect!</div>
       </div>
       <div className="form-container">
-        {submissionStatus === "success" && <p>Message sent!</p>}
-        {submissionStatus === "error" && <p>Error submitting the form.</p>}
         <form
           name="contact"
           onSubmit={handleSubmit}
