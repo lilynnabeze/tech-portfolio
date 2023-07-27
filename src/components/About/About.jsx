@@ -15,7 +15,7 @@ export default function About() {
           <img className="aboutpage-image" src={image} alt="Profile" />
           <div className="aboutpage-text">
             <h2 className="aboutpage-text-title">
-              Hi I&apos;m <bold className="lily">Lily</bold>, and I Empower
+              Hi I&apos;m <a href="#about" className="lily">Lily</a>, and I Empower
               Brands with Cutting-Edge Web Designs
             </h2>
             <div className="aboutpage-text-description">
@@ -32,7 +32,7 @@ export default function About() {
               </p>{" "}
               <p className="third-paragraph">
                 Let&apos;s collaborate to transform your ideas into visually
-                stunning and user-friendly digital realities.
+                stunning and user-friendly digital realities!
               </p>
             </div>
           </div>

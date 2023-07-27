@@ -29,13 +29,14 @@
   transform: scale(1.2); /* Slightly scale up the logo on hover */
 }
 
-
-
 /* Style the copyright text */
-/* You can further adjust this to fit your design */
 .footer-left p {
   margin: 0;
   font-size: 14px;
   color: #777;
   font-weight: 600;
+}
+
+.footer-left .copyright {
+  color: rgb(93, 114, 106);
 }

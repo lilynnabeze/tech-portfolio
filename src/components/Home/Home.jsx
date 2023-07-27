@@ -11,7 +11,7 @@ import "../Home/Home.css";
 
 export default function Home() {
   const [changingWord, setChangingWord] = useState("MODERN");
-  // Add more words as needed
+
 
   useEffect(() => {
     const words = ["MODERN", "CREATIVE DESIGN", "WEB DEVELOPMENT"];
