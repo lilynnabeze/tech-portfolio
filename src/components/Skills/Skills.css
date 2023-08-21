@@ -26,8 +26,8 @@
 }
 
 .skills-section_logo {
-  width: 80px; 
-  height: 80px; 
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   margin-right: 50px;
   transition: filter 0.3s; /* Add transition effect for hover */
@@ -96,4 +96,59 @@
   background-color: rgb(221, 124, 14);
   border: 1px solid rgb(221, 124, 14);
   color: white;
+}
+
+/* Media query for mobile phones and tablets */
+@media (max-width: 767px) {
+  .skills-section {
+    position: relative;
+  }
+
+  .skillspage-header {
+    margin-top: 40px;
+    margin-bottom: 45px;
+  }
+
+  .skillspage-title-background {
+    font-size: 50px;
+    margin-top: 40px;
+    white-space: nowrap;
+    position: absolute;
+    letter-spacing: normal;
+  }
+
+  .skillspage-title {
+    font-size: 18px;
+    margin-top: 25px;
+    font-size: 18px;
+    right: 38%;
+  }
+
+  .skills-section_logo-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+  }
+
+  .skills-section_logo {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+  }
+
+  .resume-button-container {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    margin-top: 200px;
+    margin-right: 50px;
+  }
+
+  .resume-button {
+    padding: 10px 30px;
+  }
 }

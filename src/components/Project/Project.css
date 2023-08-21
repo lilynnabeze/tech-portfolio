@@ -138,3 +138,83 @@
   background-color: white;
   border: 1px solid white;
 }
+
+/* Media query for mobile phones and tablets */
+@media (max-width: 767px) {
+  .project-section_wrapper {
+    padding-top: 100px;
+    height: auto;
+  }
+
+  .projectsection-title-background {
+    font-size: 50px;
+    margin-top: 10px;
+    white-space: nowrap;
+    position: absolute;
+    letter-spacing: normal;
+  }
+
+  .projectsection-title {
+    font-size: 18px;
+    margin-top: 1px;
+    font-size: 18px;
+    right: 28%;
+  }
+
+  .projects-slider {
+    display: flex;
+    overflow: auto; /* Enable horizontal scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    margin-bottom: 20px;
+  }
+
+  .slide-container {
+    display: flex; /* Ensure flex display for single project */
+
+    scroll-snap-type: x mandatory; /* Enable snap scrolling */
+    transition: none !important; /* Disable animation */
+  }
+
+  .project-container {
+    flex: 0 0 100%; /* Set the width to 100% for single project */
+    scroll-snap-align: start; /* Snap to the start of each project */
+    padding: 0 10px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+
+  .scroll-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .scroll-indicator {
+    width: 10px;
+    height: 20px;
+    border: 1px solid rgb(224, 223, 221);
+    cursor: pointer;
+  }
+
+  .scroll-indicator.active {
+    background-color: white;
+    border: 1px solid white;
+  }
+}
